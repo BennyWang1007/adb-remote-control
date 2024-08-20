@@ -1,6 +1,6 @@
-package de.oberien.adbremotecontrol.adb;
+package adb;
 
-import de.oberien.adbremotecontrol.Config;
+import utils.Config;
 
 import java.io.*;
 import java.util.ArrayList;

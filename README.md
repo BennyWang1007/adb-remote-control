@@ -19,9 +19,9 @@ From the command line run `java -jar adb-remote-control.jar`
 
 # Compiling
 
-Go into the `src/` directory and execute `javac de/oberien/adbremotecontrol/Main.java`.
+Go into the `src/` directory and execute `javac Main.java`.
 To build the `.jar` file, after compiling, execute
-`jar -cvfe adb-remote-control.jar de.oberien.adbremotecontrol.Main **/*.class`.
+`jar -cvfe adb-remote-control.jar Main **/*.class`.
 Depending on your shell, you might need to set the correct glob options.
 
 # Functionality
@@ -62,8 +62,7 @@ Currently the following keys are supported:
 To manually build and run this project, go into the `src` directory and execute
 
 ```sh
-javac de/oberien/adbremotecontrol/Main.java
-java de.oberien.adbremotecontrol.Main 
+javac Main.java && java Main 
 ```
 
 # Troubleshooting

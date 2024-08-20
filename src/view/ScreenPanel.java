@@ -1,8 +1,8 @@
-package de.oberien.adbremotecontrol.view;
+package view;
 
-import de.oberien.adbremotecontrol.adb.AdbDevice;
-import de.oberien.adbremotecontrol.adb.AdbShell;
-import de.oberien.adbremotecontrol.adb.AndroidKeyEvent;
+import adb.AdbDevice;
+import adb.AdbShell;
+import utils.AndroidKeyEvent;
 
 import javax.swing.*;
 import java.awt.*;

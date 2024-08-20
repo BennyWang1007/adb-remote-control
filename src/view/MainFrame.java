@@ -1,7 +1,7 @@
-package de.oberien.adbremotecontrol.view;
+package view;
 
-import de.oberien.adbremotecontrol.adb.AdbDevice;
-import de.oberien.adbremotecontrol.thread.ScreenshotThread;
+import adb.AdbDevice;
+import thread.ScreenshotThread;
 
 import javax.swing.*;
 import java.awt.*;

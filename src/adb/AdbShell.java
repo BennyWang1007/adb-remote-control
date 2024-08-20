@@ -1,4 +1,4 @@
-package de.oberien.adbremotecontrol.adb;
+package adb;
 
 import java.io.IOException;
 

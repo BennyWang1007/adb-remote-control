@@ -1,6 +1,4 @@
-package de.oberien.adbremotecontrol.model;
-
-import de.oberien.adbremotecontrol.adb.AndroidKeyEvent;
+package utils;
 
 /**
  * Created by <a href="jaro.fietz@gmx.de">Jaro Fietz</a>

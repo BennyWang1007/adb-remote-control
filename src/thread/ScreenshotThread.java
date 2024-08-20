@@ -1,8 +1,8 @@
-package de.oberien.adbremotecontrol.thread;
+package thread;
 
-import de.oberien.adbremotecontrol.Config;
-import de.oberien.adbremotecontrol.adb.AdbDevice;
-import de.oberien.adbremotecontrol.view.ScreenPanel;
+import utils.Config;
+import adb.AdbDevice;
+import view.ScreenPanel;
 
 import java.awt.image.BufferedImage;
 

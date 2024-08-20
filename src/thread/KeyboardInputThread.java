@@ -1,8 +1,8 @@
-package de.oberien.adbremotecontrol.thread;
+package thread;
 
-import de.oberien.adbremotecontrol.adb.AdbShell;
-import de.oberien.adbremotecontrol.adb.AndroidKeyEvent;
-import de.oberien.adbremotecontrol.model.KeyboardInput;
+import adb.AdbShell;
+import utils.AndroidKeyEvent;
+import utils.KeyboardInput;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,14 +41,14 @@ public class KeyboardInputThread extends Thread {
                     if (inp.getText() != null) {
                         if (!lastText) {
                             lastText = true;
-                            shell.executeSync(sb.toString());
+                            shell.executeAsync(sb.toString());
                             sb = new StringBuilder("input text \"");
                         }
                         sb.append(inp.getText().replaceAll("\"", "\\\\\""));
                     } else {
                         if (lastText) {
                             lastText = false;
-                            shell.executeSync(sb.append("\"").toString());
+                            shell.executeAsync(sb.append("\"").toString());
                             sb = new StringBuilder("input keyevent ");
                         }
                         sb.append(" ").append(inp.getKey().getKeycode());
@@ -57,7 +57,7 @@ public class KeyboardInputThread extends Thread {
                 if (lastText) {
                     sb.append("\"");
                 }
-                shell.executeSync(sb.toString());
+                shell.executeAsync(sb.toString());
             } catch (InterruptedException | IOException e) {
                 throw new RuntimeException(e);
             }

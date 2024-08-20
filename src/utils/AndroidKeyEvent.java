@@ -1,6 +1,8 @@
-package de.oberien.adbremotecontrol.adb;
+package utils;
 
 import java.awt.event.KeyEvent;
+import java.util.HashMap;
+import java.util.Map;
 
 public enum AndroidKeyEvent {
     UNKNOWN(0),
@@ -102,45 +104,33 @@ public enum AndroidKeyEvent {
     KEY_MOVE_HOME(122),
     KEY_MOVE_END(123);
 
-    private int keycode;
+    private static final Map<Integer, AndroidKeyEvent> AWT_TO_ANDROID_MAP = new HashMap<>();
 
-    private AndroidKeyEvent(int keycode) {
+    static {
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_ENTER, KEY_ENTER);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_ESCAPE, KEY_BACK);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_INSERT, KEY_HOME);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_CONTEXT_MENU, KEY_POWER);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_BACK_SPACE, KEY_DEL);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_DELETE, KEY_FORWARD_DEL);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_UP, KEY_DPAD_UP);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_DOWN, KEY_DPAD_DOWN);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_LEFT, KEY_DPAD_LEFT);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_RIGHT, KEY_DPAD_RIGHT);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_HOME, KEY_MOVE_HOME);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_END, KEY_MOVE_END);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_PAGE_UP, KEY_PAGE_UP);
+        AWT_TO_ANDROID_MAP.put(KeyEvent.VK_PAGE_DOWN, KEY_PAGE_DOWN);
+    }
+
+    private final int keycode;
+
+    AndroidKeyEvent(int keycode) {
         this.keycode = keycode;
     }
 
     public static AndroidKeyEvent fromAwtKeycode(int keycode) {
-        switch (keycode) {
-            case KeyEvent.VK_ENTER:
-                return KEY_ENTER;
-            case KeyEvent.VK_ESCAPE:
-                return KEY_BACK;
-            case KeyEvent.VK_INSERT:
-                return KEY_HOME;
-            case KeyEvent.VK_CONTEXT_MENU:
-                return KEY_POWER;
-            case KeyEvent.VK_BACK_SPACE:
-                return KEY_DEL;
-            case KeyEvent.VK_DELETE:
-                return KEY_FORWARD_DEL;
-            case KeyEvent.VK_UP:
-                return KEY_DPAD_UP;
-            case KeyEvent.VK_DOWN:
-                return KEY_DPAD_DOWN;
-            case KeyEvent.VK_LEFT:
-                return KEY_DPAD_LEFT;
-            case KeyEvent.VK_RIGHT:
-                return KEY_DPAD_RIGHT;
-            case KeyEvent.VK_HOME:
-                return KEY_MOVE_HOME;
-            case KeyEvent.VK_END:
-                return KEY_MOVE_END;
-            case KeyEvent.VK_PAGE_UP:
-                return KEY_PAGE_UP;
-            case KeyEvent.VK_PAGE_DOWN:
-                return KEY_PAGE_DOWN;
-            default:
-                return null;
-        }
+        return AWT_TO_ANDROID_MAP.getOrDefault(keycode, UNKNOWN);
     }
 
     public int getKeycode() {
