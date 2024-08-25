@@ -1,4 +1,4 @@
-package utils;
+package de.oberien.adbremotecontrol.utils;
 
 /**
  * Created by <a href="jaro.fietz@gmx.de">Jaro Fietz</a>

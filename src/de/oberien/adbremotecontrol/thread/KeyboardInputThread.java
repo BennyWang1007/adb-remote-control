@@ -1,12 +1,12 @@
-package thread;
-
-import adb.AdbShell;
-import utils.AndroidKeyEvent;
-import utils.KeyboardInput;
+package de.oberien.adbremotecontrol.thread;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.ArrayBlockingQueue;
+
+import de.oberien.adbremotecontrol.adb.AdbShell;
+import de.oberien.adbremotecontrol.utils.AndroidKeyEvent;
+import de.oberien.adbremotecontrol.utils.KeyboardInput;
 
 public class KeyboardInputThread extends Thread {
     private ArrayBlockingQueue<KeyboardInput> inputs;

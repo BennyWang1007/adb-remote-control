@@ -1,4 +1,4 @@
-package utils;
+package de.oberien.adbremotecontrol.utils;
 
 import java.awt.event.KeyEvent;
 import java.util.HashMap;

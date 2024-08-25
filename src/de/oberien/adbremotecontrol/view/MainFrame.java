@@ -1,11 +1,11 @@
-package view;
+package de.oberien.adbremotecontrol.view;
 
-import adb.AdbDevice;
-import thread.ScreenshotThread;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import javax.swing.*;
+
+import de.oberien.adbremotecontrol.adb.AdbDevice;
+import de.oberien.adbremotecontrol.thread.ScreenshotThread;
 
 public class MainFrame extends JFrame {
     public MainFrame() {

@@ -1,10 +1,10 @@
-package thread;
-
-import utils.Config;
-import adb.AdbDevice;
-import view.ScreenPanel;
+package de.oberien.adbremotecontrol.thread;
 
 import java.awt.image.BufferedImage;
+
+import de.oberien.adbremotecontrol.adb.AdbDevice;
+import de.oberien.adbremotecontrol.utils.Config;
+import de.oberien.adbremotecontrol.view.ScreenPanel;
 
 public class ScreenshotThread extends Thread {
     private ScreenPanel screenPanel;

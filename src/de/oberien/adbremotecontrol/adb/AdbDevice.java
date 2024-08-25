@@ -1,8 +1,4 @@
-package adb;
-
-import thread.KeyboardInputThread;
-import utils.AndroidKeyEvent;
-import utils.Utils;
+package de.oberien.adbremotecontrol.adb;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
@@ -11,6 +7,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+
+import de.oberien.adbremotecontrol.thread.KeyboardInputThread;
+import de.oberien.adbremotecontrol.utils.AndroidKeyEvent;
+import de.oberien.adbremotecontrol.utils.Utils;
 
 public class AdbDevice {
     private KeyboardInputThread keyboardThread;

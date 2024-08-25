@@ -1,10 +1,9 @@
-package utils;
+package de.oberien.adbremotecontrol.utils;
 
-import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Utils {
     public static String getDeviceName() {

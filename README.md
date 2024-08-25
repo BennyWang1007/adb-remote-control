@@ -65,6 +65,10 @@ To manually build and run this project, go into the `src` directory and execute
 javac Main.java && java Main 
 ```
 
+# Speed Up
+* Since the screencap from adb is quite slow, you can use the `adb shell wm size widthxheight` command to change the resolution of the device to speed up the screencap.
+* Also you can change the way to get the screen image, see `public BufferedImage screenshot() {...}` in `src/de/oberien/adbremotecontrol/adb/Adbdevice.java`.
+
 # Troubleshooting
 
 ## Signal

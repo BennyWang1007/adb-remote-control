@@ -1,4 +1,4 @@
-package utils;
+package de.oberien.adbremotecontrol.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

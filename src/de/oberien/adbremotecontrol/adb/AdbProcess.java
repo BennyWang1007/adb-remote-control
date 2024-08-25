@@ -1,10 +1,10 @@
-package adb;
-
-import utils.Config;
+package de.oberien.adbremotecontrol.adb;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+
+import de.oberien.adbremotecontrol.utils.Config;
 
 public class AdbProcess implements Closeable {
     public BufferedInputStream in;
